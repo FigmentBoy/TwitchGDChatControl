@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Twitch Chat GD Control",
   "main": "index.js",
-  "bin": "index.js",
+  "bin": "start.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +22,6 @@
     "readline": "^1.3.0"
   },
   "pkg": {
-    "assets": ["./**/*", "./*"]
+    "assets": ["**/*", "*"]
   }
 }
