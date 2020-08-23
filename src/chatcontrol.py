@@ -1,9 +1,6 @@
 
-import os
-os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 from twitchobserver import Observer
 import webbrowser, time, win32api, win32gui, win32con, gd
-from pygame import mixer
 import json
 
 win = win32gui.FindWindow(None, 'Geometry Dash')
