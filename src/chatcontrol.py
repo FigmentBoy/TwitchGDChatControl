@@ -1,4 +1,4 @@
-
+import os
 from twitchobserver import Observer
 import webbrowser, time, win32api, win32gui, win32con, gd
 import json
@@ -42,8 +42,8 @@ mem = gd.memory.get_memory()
 with Observer('GDControl', oauth) as observer:
     observer.join_channel(channel)
 
-    print('\nBot is online! Good luck :D')
-    mixer.init()
+    os.system('cls')
+    print('Bot is online! Good luck :D')
 
     while True:
         try:
@@ -51,10 +51,11 @@ with Observer('GDControl', oauth) as observer:
                 if event.type == 'TWITCHCHATMESSAGE':
                     if event.message.lower() == '!click' and mem.percent > 0:
                         click()
-                        print('click')
                     elif event.message.lower() == '!hold' and mem.percent > 0:
                         hold()
                     elif event.message.lower()=='!release' and mem.percent > 0:
                         release()
         except:
             mem = gd.memory.get_memory()
+            win = win32gui.FindWindow(None, 'Geometry Dash')
+
