@@ -61,15 +61,15 @@ with Observer('GDControl', oauth) as observer:
                         release()
                     elif event.message.lower() == '!rick' and event.nickname.lower() == 'figmentboy':
                         mixer.music.stop()
-                        mixer.music.load('./sounds/rick.mp3')
+                        mixer.music.load('src/sounds/rick.mp3')
                         mixer.music.play()
                     elif event.message.lower() == '!bwomp' and event.nickname.lower() == 'figmentboy':
                         mixer.music.stop()
-                        mixer.music.load('./sounds/bwomp.mp3')
+                        mixer.music.load('src/sounds/bwomp.mp3')
                         mixer.music.play()
                     elif event.message.lower() == '!knock' and event.nickname.lower() == 'figmentboy':
                         mixer.music.stop()
-                        mixer.music.load('./sounds/knock.mp3')
+                        mixer.music.load('src/sounds/knock.mp3')
                         mixer.music.play()
                     elif event.message.lower() == '!stopsounds' and event.nickname.lower() == 'figmentboy':
                         mixer.music.stop()
