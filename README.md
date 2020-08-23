@@ -1,8 +1,8 @@
 # How to install:
 Download Python 3.8.3
 
-Run `setup.bat`
+Download nodejs 14.x
 
-Run `run.bat`
+Open a command line and type `npm i`
 
-The first time you will need to log in with your twitch account, then it will automatically save
+Once complete, in the same command line type `node index`. The tool should now be running
