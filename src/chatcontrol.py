@@ -3,7 +3,11 @@ from twitchobserver import Observer
 import webbrowser, time, win32api, win32gui, win32con, gd
 import json
 
-win = win32gui.FindWindow(None, 'Geometry Dash')
+try:
+    win = win32gui.FindWindow(None, 'Geometry Dash')
+except:
+    print('Please open Geometry Dash')
+    exit()
 
 def click():
     win32api.SendMessage(win, win32con.WM_LBUTTONUP, win32con.MK_LBUTTON, win32api.MAKELONG(10, 10))
@@ -37,7 +41,11 @@ else:
     configf.write(json.dumps(config, indent=4))
     configf.close()
 
-mem = gd.memory.get_memory()
+try:
+    mem = gd.memory.get_memory()
+except:
+    print("Please open Geometry Dash")
+    exit()
 
 with Observer('GDControl', oauth) as observer:
     observer.join_channel(channel)
