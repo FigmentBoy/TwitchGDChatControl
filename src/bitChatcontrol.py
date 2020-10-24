@@ -67,7 +67,6 @@ def getEmotes(channelname: str):
     req = requests.get(f'https://api.twitch.tv/v5/users?login={channelname}', headers={'Client-ID': 'ifn3ztal79zhqkclxtmu0oljs1su98'})
     channelid = json.loads(req.text)['users'][0]['_id']
 
-    print(channelid)
     req = requests.get(f'https://api.twitch.tv/v5/bits/actions?channel_id={channelid}', headers={'Client-ID': 'ifn3ztal79zhqkclxtmu0oljs1su98'})
 
     return [e['prefix'] for e in json.loads(req.text)['actions']]
